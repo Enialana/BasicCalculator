@@ -1,0 +1,108 @@
+@font-face {
+    font-family: "num-digi";
+    src: url("fonts/Orbitron-Medium.ttf");
+}
+ @font-face {
+    font-family: "num-boton";
+    src: url(fonts/FiraCode-SemiBold.ttf);
+ }
+* {
+  box-sizing: border-box;
+  padding: 0px;
+  margin: 0px;
+}
+body {
+  box-sizing: border-box;
+  padding: 0px;
+  margin: 0px;
+  font-family: "num-boton";
+}
+
+h1{
+    margin-top: 20px;
+    text-align: center;
+}
+#calculator {
+    overflow: auto;
+  font-family:  "num-boton";
+  box-sizing: border-box;
+  background-color: rgb(88, 156, 235);
+  max-width: 500px;
+  box-shadow: rgb(77, 113, 155) 15px 15px 0px;
+  margin: 50px auto;
+  padding: 30px 30px 0px;
+  border-radius: 10px;
+}
+
+#calculator > .operands{
+  font-family: "num-digi";
+  box-sizing: border-box;
+  margin: 0px;
+  width: 100%;
+  text-align: right;
+  background-color: rgb(188, 209, 192);
+  margin-bottom: 20px;
+  font-size: 50px;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+#calculator::after {
+  content: "";
+  position: absolute;
+  width: 25px;
+  height: 8px;
+  background-color: rgb(77, 113, 155);
+  transform: rotate(45deg);
+  margin-left: -29px;
+  margin-top: -2px;
+  z-index: -1;
+}
+#calculator::before {
+  content: "";
+  position: absolute;
+  width: 25px;
+  height: 8px;
+  margin-left: 458px;
+  margin-top: -22px;
+  background-color: rgb(77, 113, 155);
+  transform: rotate(45deg);
+  z-index: -2;
+}
+
+#calculator > .operands > [data-operand-1]{
+font-size: 25px;
+}
+
+#calculator > #btn-grid {
+display: grid;
+grid-template-columns: 1fr 1fr 1fr 1fr;
+gap: 10px;
+}
+
+#calculator > #btn-grid > button{
+    padding: 10px;
+    background-color: #ececec;
+    font-weight: bold;
+    border-radius: 10px;
+    border-width: 5px;
+    border-color: #c9c9c9;
+    font-size: 25px;
+}
+#calculator > #btn-grid > button:nth-child(2){
+    grid-column: span 2;
+}
+
+#calculator > #btn-grid > button:last-child{
+    grid-column: span 2;
+    background-color: #b9a444;
+    border-color:#be9960;
+}
+
+#copy{
+    font-size: 12px;
+    padding: 10px;
+    color: #ccc;
+    text-align: center;
+}
+
